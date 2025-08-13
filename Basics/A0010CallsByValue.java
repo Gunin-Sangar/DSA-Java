@@ -5,7 +5,7 @@ public class A0010CallsByValue {
     // java stores fns in a stack ... like main() and swap()
     // main has int a and int b
     // swap has copy of int a and int b
-    // both are not same ... changes made to one fn will remain under it only.
+    // both are not same ... changes made to one fn will remain under it only
 
 
 
@@ -14,8 +14,8 @@ public class A0010CallsByValue {
 
 
     // CALLS BY REFERENCE [possible in cpp]
-    // A method gets a reference to the **same memory location**
-    // of the variable, so changes inside the method affect the original variable.
+    // A method gets a reference to the same memory location
+    // of the variable, so changes inside the method affect the original variable
 
     // there is no such function formed in java ...
 
