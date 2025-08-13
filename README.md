@@ -7,15 +7,16 @@ NOTE : will try to update readme even if i dont do anything.
 By the way, these are kind of notes.
 And the names are like that so they stay in order in the IDE (intellij) (Hope you do not mind).
 
-Day - 1 Started learning DSA in java - Aug 10
+Day - 1 Started learning DSA in java - Aug - 10
 (used git-bash to upload)
 
-Day - 2 deleted and recreated repo - Aug 11
+Day - 2 deleted and recreated repo - Aug - 11
 (tried to add new files using gitHub - should have uploaded the folder)
 
-Day - 3 cleaner code outputs Aug -12
+Day - 3 cleaner code outputs - Aug - 12
 (tried git-bash and messed up - 30min wasted)
 
-day - 4 added searching algorithms Aug - 13
+day - 4 added searching algorithms - Aug - 13
 
 (coded new methods in arrays too)
+
