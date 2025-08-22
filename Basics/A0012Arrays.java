@@ -45,9 +45,9 @@ public class A0012Arrays {
 
 
 
-        // testing reverseArray() : void
+        // reverseArray() : void
         System.out.println("-- reverseArray() : void --");
-        int[] arr5 = {0,1,2,3,4,5,6,7,8,9,10};
+        int[] arr5 = {1,2,3,4,5,6,7,8,9,10};
         reverseArray(arr5);
         System.out.println("Reversed Array : " + Arrays.toString(arr5));
         reverseArray(arr5);
@@ -59,7 +59,23 @@ public class A0012Arrays {
         System.out.println("Printing paris in an array : ");
         printPairs(arr5);
         System.out.println();
+
+        // printSubArrays () : void
+        System.out.println("-- printSubArrays () : void --");
+        printSubArrays(arr5);
+        System.out.println("printSubArrays Array : " + Arrays.toString(arr5));
+        System.out.println();
+
+        // update () : void
+        System.out.println("-- update () : void --");
+        System.out.println("Adds 1 to each index in an array : ");
+        System.out.println("Array is printed through main() and not update()");
+        update(arr5);
+        System.out.println("Updated Array : " + Arrays.toString(arr5));
+        System.out.println();
+
     }
+
 
 
     // reversing an array : void
@@ -77,23 +93,63 @@ public class A0012Arrays {
     }
 
 
-    // printing pairs : void + System.out.print();
+
+    // Array feature 5: call by reference
+    public static void update (int[] arr){
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = arr[i] + 1;
+        }
+    }
+
+
+
+    // printing pairs : void --> n(n-1)/2
     public static void printPairs(int[] numbers) {
+        int tp = 0;
         for (int i = 0; i < numbers.length; i++) {
             int curr = numbers[i]; // 2, 4, 6, 8, 10
             for (int j = i + 1; j < numbers.length; j++) {
                 System.out.print("(" + curr + "," + numbers[j] + ") ");
+                tp ++;
             }
             System.out.println();
         }
+        System.out.println("Total number of pairs : " + tp);
+        System.out.println();
+    }
+
+
+
+    // printing SubArrays : void --> n(n+1)/2
+    public static void printSubArrays(int[] numbers) {
+        int ts = 0;
+        int start;
+        int end;
+        // iterating array --> 1st index
+        for (int i = 0; i < numbers.length; i++) {
+            start = i;
+            // iterating each value again --> 2nd index
+            for (int j = i; j < numbers.length; j++) {
+                end = j;
+                // printing everything from 1st to 2nd index
+                for (int k = start; k <= end; k++) {
+                    System.out.print(numbers[k] + " ");
+                }
+                System.out.println();
+                ts ++;
+            }
+            System.out.println();
+        }
+        System.out.println("Total number of SubArrays : " + ts);
+        System.out.println();
     }
 }
 
 /*
 ==================== ARRAYS IN JAVA ====================
     -- Definition --
-    An array is a collection of elements of the **same data type**
-    stored in **contiguous memory locations** and accessed via an index.
+    An array is a collection of elements of the same data type
+    stored in contiguous memory locations and accessed via an index.
 
     -- contiguous means to share a common border --
     so if we store [a, b, c] in an array and a has memory address of (say)1000
@@ -108,7 +164,8 @@ public class A0012Arrays {
         2. index starts at 0 [Zero-based indexing].
         3. Can store both primitive types and objects.
         4. Access time is O(1) (direct index access).
-        5. Default initialization:
+        5. Arrays are call by reference [uses memory location for update fn]
+        6. Default initialization:
             - byte, short, int, long → 0
             - float, double → 0.0
             - char → '\u0000' (null char)
@@ -116,7 +173,7 @@ public class A0012Arrays {
             - Object references → null
 
     -- Example: Default Values --
-    int[] nums = new int[3];        // [0, 0, 0]
+    int[] num = new int[3];        // [0, 0, 0]
     boolean[] flags = new boolean[3]; // [false, false, false]
     String[] names = new String[3]; // [null, null, null]
 
