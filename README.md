@@ -16,7 +16,14 @@ Day - 2 deleted and recreated repo - Aug - 11
 Day - 3 cleaner code outputs - Aug - 12
 (tried git-bash and messed up - 30min wasted)
 
-day - 4 added searching algorithms - Aug - 13
-
+Day - 4 added searching algorithms - Aug - 13
 (coded new methods in arrays too)
+
+
+10 days skip (college core bruh!!!)
+
+
+Day - 5 added Brute Force - Aug - 23
+(Made logic myself - lev ez)
+
 
