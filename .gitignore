@@ -27,3 +27,6 @@
 
 # Removing out folder from anywhere in my project
 out/
+
+# removeing all class
+*.class

@@ -27,3 +27,21 @@ Day - 5 added Brute Force - Aug - 23
 (Made logic myself - lev ez)
 
 
+
+
+
+COMING BACK TO THIS REPO AFTER LONG
+This seems like not so big documentation of my journey.
+plus i dont recall nothing and this was never updated like i told myself. (i totally forgot xd)
+
+DSA abhi 5th sem me phirse start karunga. (tbh i think i never did anything.)(so a fresh start.)
+
+
+
+
+
+YEAR - 2026
+
+
+Day - 6 Updated README.md June - 25
+(finally)
