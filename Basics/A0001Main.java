@@ -18,10 +18,13 @@ package Basics;
 // Using this class for testing my doubts
 class A0001Main {
     public static void main(String[] args) {
-
+        System.out.println("Trying to compile using shortcut");
     }
 }
 
 
 // Ctrl + F9  = compile
+//  cmd + shift + F9 (for mac)
+
 // Shift + F10  = compile and run
+// ctrl + shift + R (for mac)

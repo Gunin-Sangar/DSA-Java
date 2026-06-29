@@ -5,15 +5,21 @@ import java.util.Scanner;
 // FunFact
 // If - else statements works without the curly brackets ... but only one line codes gets executed
 // If I had written 2 lines under if statement rather than 1 line, then the code won't compile.
-// You can write any amount of lines under the else statement though... idc Y
+// also the else statement also sees only 1 line under it even if you have written multiple lines.
+// it just sees them outside its scope. [also mentioned in the try code below]
 
 ////Try it
-////        public static void main(String[] args) {
-////            int num = 7;
-////            if(num%2==0)
-////                System.out.println("even");
-////            else System.out.println("odd");
-////        }
+////public static void main(String[] args) {
+////    int num = 7;
+////    if(!(num%2==0))
+////        System.out.println("even");
+////    else
+////        System.out.println("odd1");
+////    // these lines are treated as outside the if-else statement | both if and else see only 1 line in-scope.
+////    System.out.println("odd2");
+////    num = 45;
+////    System.out.println(num);
+////}
 
 public class A0004Conditionals {
     public static void main(String[] args) {
