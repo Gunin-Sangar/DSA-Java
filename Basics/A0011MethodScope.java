@@ -1,7 +1,7 @@
 package Basics;
 
 public class A0011MethodScope {
-    // Method scope --> A and B are swapped inside sum method only
+    // Method scope --> A and B are swapped inside swap method only
     public static void swap(int a, int b) {
         int temp = a;
         a = b;
@@ -26,10 +26,11 @@ public class A0011MethodScope {
         {
             System.out.println("-- Block Scope --");
             int s = 45;
-            System.out.println("This is s from inside a Block" + s);
+            System.out.printf("This is %s from inside a Block",s);
             System.out.println();
         }
         // System.out.println(s); // throws error as s is not declared
+        System.out.println();
 
 
         // -- Another Block scope example --

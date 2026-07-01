@@ -9,12 +9,12 @@ import java.util.Arrays;
 public class A0012Arrays {
     public static void main(String[] args) {
 
-        // Array declaration and initialisation
+        // Array declaration and initialization
         System.out.println("-- Array declaration and initialisation and indexing --");
         // array ---> A with 5 elements [declared but not initialized]
         int[] arr1 = new int[5];
         System.out.println("This is A[1] : " + arr1[1]);
-        // array ---> B [declared but initialized]
+        // array ---> B [declared and initialized]
         int[] arr2 = {10, 34, 23, 45, 65};
         System.out.println("This is B[2] : " + arr2[2]);
         System.out.println();
@@ -25,10 +25,6 @@ public class A0012Arrays {
         System.out.println("-- Array References and Copying Arrays --");
         int[] arr3 = { 1, 2, 3 };
         int[] arr4 = { 4, 7, 6 };
-        // the reference in arr3 will be changed to that of arr4
-        // meaning that arr3 and arr4 will both refer to the same array object [or memory address]:
-        arr3 = arr4;
-        arr4[1] = 5;
         // for each loop
         System.out.print("This is arr3 : ");
         for (int i : arr3) {
@@ -41,6 +37,32 @@ public class A0012Arrays {
             System.out.print(i + " ");
         }
         System.out.println();
+
+        // the reference in arr3 will be changed to that of arr4
+        // meaning that arr3 and arr4 will both refer to the same array object [or memory address]:
+        arr3 = arr4;
+        arr4[1] = 5;
+        System.out.println(arr3);
+        System.out.println(arr4);
+        // for each loop
+        System.out.print("This is arr3 : ");
+        for (int i : arr3) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        // for each loop
+        System.out.print("This is arr4 : ");
+        for (int i : arr4) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+        System.out.println("-- arr.clone(); command --");
+        arr3 = arr4.clone();
+        arr4[1] = 567;
+        System.out.println(arr3);
+        System.out.println(arr4);
         System.out.println();
 
 

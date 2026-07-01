@@ -5,14 +5,17 @@ import java.util.Scanner;
 // FunFact
 // if u type next() and then nextLine()
 // Then the output will only take input of the next() and ignore the nextLine()
-// but if u write "aaa bbb" in next(),then due to whitespace, name1 = aaa and name2 = bbb
+// Why as the next() only reads till the special characters or whitespace and leaves that in the buffer.
+// so that /n or " " or anything else is read by the nextLine() and shows no output as it outputs the /n which is not visible.
+
+// Example if u write name1 = "aaa bbb" in next(),then due to whitespace, name1 = "aaa" and name2 = "bbb" in the below code.
 // Always use sc.nextLine() carefully after sc.next(), sc.nextInt(), or similar methods
 
 // sc.nextLine(); can resolve this error no problem!!!
 
-// but if u type next() and then next() then all good
+// but if u type next() and then next() then all good (but be careful)(whitespace issue)
 // but if u type nextLine() and then next() then all good
-// but if u type nextLine() and then nextLine() then all good
+//               nextLine() and then nextLine() then all good
 
 /* REASONING
     FunFact: Mixing next() and nextLine() can cause bugs.
@@ -38,13 +41,13 @@ public class A0006IO {
     public static void main(String[] args){
         Scanner  sc= new Scanner(System.in);
 
-        //stores all value ... even after whitespace
+        //stores all value ... till whitespace or special character
         System.out.println("-- next() --");
         System.out.println("Enter your name :");
         String name1 = sc.next();
         System.out.println();
 
-        //stores all value ... only till whitespace
+        //stores all value ... till whitespace or special character
         System.out.println("-- next() --");
         System.out.println("Enter your name :");
         String name2 = sc.next();
