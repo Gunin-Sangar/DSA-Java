@@ -3,7 +3,7 @@ package Basics;
 public class A0014BruteForce {
     public static void main(String[] args) {
 
-        // Array declaration and initialisation
+        // Array declaration and initialization
         System.out.println("-- Max Sub-array Sum using Brute Force --");
         int[] arr = {45, 65, -95, 243, 34, -26, 128};
 

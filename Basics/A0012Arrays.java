@@ -39,7 +39,7 @@ public class A0012Arrays {
         System.out.println();
 
         // the reference in arr3 will be changed to that of arr4
-        // meaning that arr3 and arr4 will both refer to the same array object [or memory address]:
+        // meaning that arr3 and arr4 will both refer to the same array object [or reference address]:
         arr3 = arr4;
         arr4[1] = 5;
         System.out.println(arr3);
@@ -58,6 +58,9 @@ public class A0012Arrays {
         System.out.println();
         System.out.println();
 
+        // clone() performs a shallow copy of the array
+        // For primitive arrays, it behaves like a deep copy of values
+        // For object arrays, only references are copied (not objects themselves)
         System.out.println("-- arr.clone(); command --");
         arr3 = arr4.clone();
         arr4[1] = 567;
@@ -153,10 +156,16 @@ public class A0012Arrays {
             // iterating each value again --> 2nd index
             for (int j = i; j < numbers.length; j++) {
                 end = j;
+                System.out.print("(");
                 // printing everything from 1st to 2nd index
                 for (int k = start; k <= end; k++) {
-                    System.out.print(numbers[k] + " ");
+                    if(k==end){
+                        System.out.print(numbers[k]);
+                        break;
+                    }
+                    System.out.print(numbers[k] + ", ");
                 }
+                System.out.print(")");
                 System.out.println();
                 ts ++;
             }
