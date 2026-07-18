@@ -10,7 +10,7 @@ public class A0002Operators {
         System.out.println("This is 2 - 5 : " + (2 - 5));
         System.out.println("This is 2 * 5 : " + (2 * 5));
         System.out.println("This is 2 % 5 : " + (2 % 5));
-        System.out.println("This is 2 % 5.0 : " + (2 % 5.0));  // Ensure floating-point division
+        System.out.println("This is 2 % 5.0 : " + (2 % 5.0));  // Ensure floating-point remainder
         System.out.println("This is 2 / 5 : " + (2 / 5));
         System.out.println("This is 2 / 5.0 : " + (2 / 5.0));  // Ensure floating-point division
         System.out.println();
@@ -31,22 +31,22 @@ public class A0002Operators {
         System.out.println("Value of b : " + b);
         System.out.println();
 
-        // Taking exponents
-        System.out.println("-- Taking exponents --");
+        // // Exponentiation and mathematical operations
+        System.out.println("-- // Exponentiation and mathematical operations --");
         System.out.println("This is 2 ^ 4 : " + Math.pow(2, 4)); // Math.pow for exponents
         System.out.println("This is -3 ^ 2 : " + Math.pow(-3, 2));
-        System.out.println("This is Math.floor(13.5 / 2) : " + Math.floor(13.5 / 2)); // Floor division
+        System.out.println("This is Math.floor(13.5 / 2) : " + Math.floor(13.5 / 2)); // Rounds down to the nearest whole number
         System.out.println();
 
-        // Arithmetic operators
-        System.out.println("-- Arithmetic operators --");
+        // Relational operators [Comparison]
+        System.out.println("-- Relational operators --");
         System.out.println("This is 2 > 5 : " + (2 > 5));
         System.out.println("This is 2 <= 5 : " + (2 <= 5));
         System.out.println("This is 2 == 5 : " + (2 == 5));
         System.out.println();
 
-        //'AND' and 'OR' operator
-        System.out.println("-- 'AND' and 'OR' operator --");
+        // Logical operators (AND, OR, NOT)
+        System.out.println("-- Logical operators (AND, OR, NOT) --");
         System.out.println("This is (2 < 5) and (5==2) : " + ((2 < 5) && (5 == 2)));
         System.out.println("This is (2 < 5) or (5==2) : " + ((2 < 5) || (5 == 2)));
         System.out.println("This is not (5 == 2) : " + (!(5 == 2)));

@@ -20,19 +20,19 @@ public class A0018Sort {
 
         // Selection sort
         int[] arr3 = {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
-        selectionSort(arr3, 0, arr3.length, 0);
+        selectionSort(arr3, 0, arr3.length-1, 0);
         System.out.println("selectionSort 0 min A: " + Arrays.toString(arr3));
 
         int[] arr4 = {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
-        selectionSort(arr4, 0, arr4.length, 1);
+        selectionSort(arr4, 0, arr4.length-1, 1);
         System.out.println("selectionSort 1 min D: " + Arrays.toString(arr4));
 
         int[] arr5 = {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
-        selectionSort(arr5, 0, arr5.length, 2);
+        selectionSort(arr5, 0, arr5.length-1, 2);
         System.out.println("selectionSort 2 max A: " + Arrays.toString(arr5));
 
         int[] arr6= {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
-        selectionSort(arr6, 0, arr6.length, 3);
+        selectionSort(arr6, 0, arr6.length-1, 3);
         System.out.println("selectionSort 1 max D: " + Arrays.toString(arr6));
 
         System.out.println();
@@ -48,6 +48,7 @@ public class A0018Sort {
 
         System.out.println();
 
+        //Inbuilt sort methods
         int[] arr9= {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
         // sort excludes end index. so this sort the index 3-7 [not 8]
         Arrays.sort(arr9, 3,8);
@@ -62,10 +63,22 @@ public class A0018Sort {
 
         System.out.println();
 
+        // Counting Sort
         int[] arr11 = {1,1,4,3,5,3,7,5,6};
         countingSort(arr11);
         System.out.println("countingSort: " + Arrays.toString(arr11));
+
+        System.out.println();
+
+        // merge Sort
+        int[] arr12 = {56, 12, 98, 34, 45, 100, 34, 450, 1, 2, 9, 4, 100};
+        int[] arr13 = mergeSort(arr12, 0, arr12.length-1);
+        System.out.println("mergeSort: " + Arrays.toString(arr13));
     }
+
+
+
+
 
     public static void swap(int[] arr, int first, int second) {
         int temp = arr[first];
@@ -95,7 +108,7 @@ public class A0018Sort {
     }
 
     public static void selectionSort(int[] arr, int low, int high, int order) {
-        if (low >= high-1) {
+        if (low >= high) {
             return;
         }
         int minIndex = low;
@@ -103,7 +116,7 @@ public class A0018Sort {
 
         // Min Ascending order
         if(order == 0){
-            for (int i = low + 1; i < high; i++) {
+            for (int i = low + 1; i <= high; i++) {
                 if (arr[i] < arr[minIndex]) {
                     minIndex = i;
                 }
@@ -114,29 +127,29 @@ public class A0018Sort {
 
         // Min Descending order
         if(order == 1){
-            for (int i = low + 1; i < high; i++) {
+            for (int i = low + 1; i <= high; i++) {
                 if (arr[i] < arr[minIndex]) {
                     minIndex = i;
                 }
             }
-            swap(arr, minIndex,high-1);
-            selectionSort(arr, low, high - 1,order);
+            swap(arr, minIndex,high);
+            selectionSort(arr, low, high-1,order);
         }
 
         // Max Ascending order
         if(order == 2){
-            for (int i = low + 1; i < high; i++) {
+            for (int i = low + 1; i <= high; i++) {
                 if (arr[i] > arr[maxIndex]) {
                     maxIndex = i;
                 }
             }
-            swap(arr, maxIndex,high-1);
+            swap(arr, maxIndex,high);
             selectionSort(arr, low, high-1, order);
         }
 
         // Max Descending order
         if(order == 3){
-            for (int i = low + 1; i < high; i++) {
+            for (int i = low + 1; i <= high; i++) {
                 if (arr[i] > arr[maxIndex]) {
                     maxIndex = i;
                 }
@@ -189,5 +202,38 @@ public class A0018Sort {
                 count[i]--;
             }
         }
+    }
+
+    public static int[] mergeSort(int[] arr, int low, int high){
+        int mid = low + (high - low) / 2;
+        if(low >= high){return new int[]{arr[low]};}
+
+        int[] left = mergeSort(arr, low, mid);
+        int[] right = mergeSort(arr, mid+1, high);
+        return merge(left, right);
+    }
+    public static int[] merge(int[] left, int[] right) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int[] mergedArr = new int[left.length + right.length];
+
+        while (j < left.length && k < right.length) {
+            if (left[j] <= right[k]) {
+                mergedArr[i++] = left[j++];
+            } else {
+                mergedArr[i++] = right[k++];
+            }
+        }
+
+        while (j < left.length) {
+            mergedArr[i++] = left[j++];
+        }
+
+        while (k < right.length) {
+            mergedArr[i++] = right[k++];
+        }
+
+        return mergedArr;
     }
 }
