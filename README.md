@@ -45,3 +45,15 @@ YEAR - 2026
 
 Day - 6 Updated README.md June - 25
 (finally) (also i am removing these not required file and folder - was annoyed seeing them on github)
+
+Day - 7 Have started OOPS
+skipping and skimming course so that i can cover up for exam on 1st aug.
+Tbh the skimming part is not going well.
+have to learn everything.
+
+Note: i am using git and unlike back then now i love it.
+made it super easy to switch laptops for work. awesome stuff.
+
+Day - 8 Started LinkedList gotta cover for st1
+Skipped all of OPPS (did only 2hrs)... will cover after st1 ...
+i remember much concepts but the videos kunal make are lengthy af. (but good quality)
