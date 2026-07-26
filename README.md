@@ -54,6 +54,12 @@ have to learn everything.
 Note: i am using git and unlike back then now i love it.
 made it super easy to switch laptops for work. awesome stuff.
 
-Day - 8 Started LinkedList gotta cover for st1
+Day - 8 Started Singly LinkedList gotta cover for st1
 Skipped all of OPPS (did only 2hrs)... will cover after st1 ...
 i remember much concepts but the videos kunal make are lengthy af. (but good quality)
+
+Day - 9 Started Doubly LinkedList
+Tried to reverse it too. Now i know why you need a stack ... makes it a lot simpler to understand.
+but for interview question we need O(1) space complexity ... which need 3 pointer iteration method using
+prev curr next iterators simple enough but i dont have the brains for it rn.
+will do on leetcode ;>
