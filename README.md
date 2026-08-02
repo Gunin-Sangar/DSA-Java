@@ -63,3 +63,6 @@ Tried to reverse it too. Now i know why you need a stack ... makes it a lot simp
 but for interview question we need O(1) space complexity ... which need 3 pointer iteration method using
 prev curr next iterators simple enough but i dont have the brains for it rn.
 will do on leetcode ;>
+
+Day - 10 Saw my void main ... why do i not make a printing fn at this point :)
+100s of lines of code. Just to print arrays and objs.

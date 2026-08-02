@@ -14,9 +14,11 @@ public class A001Stack {
         stack.push(67);
 
         int num = stack.pop();
-        System.out.println("Stack            : " + stack);
-        System.out.println("Stack.getClass() : " + stack.getClass());
+        System.out.println("stack            : " + stack);
+        System.out.println("stack.getClass() : " + stack.getClass());
         System.out.println("num              : " + num);
+        System.out.println("stack.search(23) : " + stack.search(23));
+        System.out.println("stack.empty()    : " + stack.empty());
         System.out.println("int.class        : " + int.class);
         System.out.println();
         // Primitive data types (int, double, char, boolean, etc.) are not objects,

@@ -24,19 +24,29 @@ public class A001LinkedList {
         }
 
         // LinkedList Methods
-        public void insert(int data, int index) {
+        public void add(int index, int data) {
+            if(index < 0 || index > size) return;
+
+            if(index == 0){
+                addFirst(data);
+                return;
+            }
+
+            if(index == size){
+                addLast(data);
+                return;
+            }
+
             Node temp = head;
-            for(int i = 0; i < index-1; i++){
+            for(int i = 0; i < index - 1; i++){
                 temp = temp.next;
             }
 
-            Node node = new Node(data, temp.next);
-            temp.next = node;
-
+            temp.next = new Node(data, temp.next);
             size++;
         }
 
-        public void insertFirst(int data) {
+        public void addFirst(int data) {
             Node node = new Node(data);
             node.next = head;
             head = node;
@@ -49,7 +59,7 @@ public class A001LinkedList {
             size++;
         }
 
-        public void insertLast(int data) {
+        public void addLast(int data) {
             Node node = new Node(data);
             if(tail == null){  // empty list
                 head = tail = node;
@@ -62,14 +72,14 @@ public class A001LinkedList {
             size++;
         }
 
-        public void delete (int index) {
+        public void remove(int index) {
             if(index < 0 || index >= size){return;}
             if(index == 0) {
-                deleteFirst();
+                removeFirst();
                 return;
             }
             if(index == size-1){
-                deleteLast();
+                removeLast();
                 return;
             }
 
@@ -84,7 +94,7 @@ public class A001LinkedList {
             size--;
         }
 
-        public void deleteFirst() {
+        public void removeFirst() {
             if (size == 0) return;
 
             if (size == 1) {
@@ -98,7 +108,7 @@ public class A001LinkedList {
             size--;
         }
 
-        public void deleteLast() {
+        public void removeLast() {
             if (size == 0) return;
 
             if (size == 1) {
@@ -131,55 +141,55 @@ public class A001LinkedList {
         LinkedList list = new LinkedList();
 
         System.out.println("=== Insert First Test ===");
-        list.insertFirst(10);
-        list.insertFirst(20);
-        list.insertFirst(30);
+        list.addFirst(10);
+        list.addFirst(20);
+        list.addFirst(30);
         list.display();   // Expected: 30 --> 20 --> 10 --> null
 
 
         System.out.println("\n=== Insert Last Test ===");
-        list.insertLast(40);
-        list.insertLast(50);
+        list.addLast(40);
+        list.addLast(50);
         list.display();   // Expected: 30 --> 20 --> 10 --> 40 --> 50 --> null
 
 
         System.out.println("\n=== Insert at Index Test ===");
-        list.insert(25, 2);
+        list.add(2, 25);
         list.display();   // Expected: 30 --> 20 --> 25 --> 10 --> 40 --> 50 --> null
 
 
         System.out.println("\n=== Delete First Test ===");
-        list.deleteFirst();
+        list.removeFirst();
         list.display();   // Expected: 20 --> 25 --> 10 --> 40 --> 50 --> null
 
 
         System.out.println("\n=== Delete Last Test ===");
-        list.deleteLast();
+        list.removeLast();
         list.display();   // Expected: 20 --> 25 --> 10 --> 40 --> null
 
 
         System.out.println("\n=== Delete Middle Index Test ===");
-        list.delete(1);
+        list.remove(1);
         list.display();   // Expected: 20 --> 10 --> 40 --> null
 
 
         System.out.println("\n=== Delete First Using Index Test ===");
-        list.delete(0);
+        list.remove(0);
         list.display();   // Expected: 10 --> 40 --> null
 
 
         System.out.println("\n=== Delete Last Using Index Test ===");
-        list.delete(1);
+        list.remove(1);
         list.display();   // Expected: 10 --> null
 
 
         System.out.println("\n=== Empty List Test ===");
-        list.deleteFirst();
+        list.removeFirst();
         list.display();   // Expected: null
 
 
         System.out.println("\n=== Insert After Empty Test ===");
-        list.insertLast(100);
+        list.addLast(100);
         list.display();   // Expected: 100 --> null
     }
 }
