@@ -1,5 +1,5 @@
 package OOPS;
-
+// class and objs
 class A001OOPS {
     public static void main(String[] args) {
         Student s1 = new Student();
