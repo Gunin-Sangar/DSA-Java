@@ -1,4 +1,6 @@
 # DSA-Java
+(Using IntelliJ) (highly recommended)
+
 Intro
 wasted time in 1st year.
 This is me from 2nd year (3rd sem) trying to note what I had and will do in a span of a year (aug 2025 - Aug 2026).
@@ -66,3 +68,7 @@ will do on leetcode ;>
 
 Day - 10 Saw my void main ... why do i not make a printing fn at this point :)
 100s of lines of code. Just to print arrays and objs.
+
+Day - 11 of writing randomly on readme
+did inheritance and polymorphism ... dsa feels too big rn (not in my capacity to do it) (proceeds to do more dsa)
+Fun fact: learned why we write @Override

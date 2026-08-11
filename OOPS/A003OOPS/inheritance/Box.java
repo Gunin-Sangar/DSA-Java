@@ -1,4 +1,4 @@
-package OOPS.A003OOPS;
+package OOPS.A003OOPS.inheritance;
 
 // inheritance
 public class Box {
@@ -7,9 +7,9 @@ public class Box {
     double h;
 
     public Box() {
-        this.l = 0;
-        this.w = 0;
-        this.h = 0;
+        this.l = -1;
+        this.w = -1;
+        this.h = -1;
     }
 
     // cube
@@ -19,6 +19,7 @@ public class Box {
         this.h = side;
     }
 
+    // all parameters
     public Box(double l, double w, double h) {
         this.l = l;
         this.w = w;
