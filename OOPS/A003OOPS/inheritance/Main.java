@@ -42,5 +42,8 @@ public class Main {
         // BoxWeight boxparent = new Box(2,3,4);
         // boxchild.display();
 
+        Box.baseClassName();
+        BoxWeight.baseClassName();
+        BoxPrice.baseClassName();
     }
 }

@@ -26,4 +26,12 @@ public class BoxPrice extends BoxWeight{
         super(old);
         this.cost = old.cost;
     }
+
+    /*
+    Does not work as this is a static method in Box class
+    @Override
+    public void baseClassName(){
+        System.out.println("BoxPrice");
+    }
+    */
 }

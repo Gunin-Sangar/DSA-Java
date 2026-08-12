@@ -1,6 +1,8 @@
 package OOPS.A003OOPS.inheritance;
 
 // inheritance
+// you can make class final [used so that the class cant be inherited]
+// if public final class Box {} then no extends
 public class Box {
     double l;
     double w;
@@ -33,8 +35,18 @@ public class Box {
         this.h = old.h;
     }
 
+    // if this method were final type
+    // then i won't be able to change implementation in subclasses
     public void display(){
         System.out.printf("Length: %.2f\nWidth: %.2f\nHeight: %.2f\n\n",this.l,this.w,this.h);
     }
 
+    // Static method
+    // -> can be accessed through a subclass because of inheritance
+    // -> is NOT overridden; it can be hidden
+    // -> belongs to the class, not to an object
+    public static void baseClassName(){
+        System.out.println("Base Class for all is: Box");
+        System.out.println();
+    }
 }

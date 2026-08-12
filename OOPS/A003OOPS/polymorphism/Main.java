@@ -1,6 +1,6 @@
 package OOPS.A003OOPS.polymorphism;
 
-// run-time polymorphism
+// run-time polymorphism / Dynamic Polymorphism / Late Binding
 // Example: Method Overriding
 public class Main {
     public static void main(String[] args) {

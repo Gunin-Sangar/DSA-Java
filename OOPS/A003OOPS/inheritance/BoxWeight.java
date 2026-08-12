@@ -29,7 +29,16 @@ public class BoxWeight extends Box{
         this.weight = -1;
     }
 
+    @Override
     public void display(){
         System.out.printf("Length: %.2f\nWidth: %.2f\nHeight: %.2f\nWeight: %.2f\n\n",this.l,this.w,this.h,this.weight);
     }
+
+    /*
+    Does not work as this is a static method in Box class
+    @Override
+    public void baseClassName(){
+        System.out.println("BoxWeight");
+    }
+    */
 }

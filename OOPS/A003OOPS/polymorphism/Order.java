@@ -1,6 +1,6 @@
 package OOPS.A003OOPS.polymorphism;
 
-// compile-time polymorphism
+// compile-time polymorphism / Static Polymorphism / Early Binding
 // Example: Method Overloading
 class Order {
     void placeOrder(String item) {
