@@ -24,6 +24,7 @@
 
 # Removing .idea folder from anywhere in my project
 .idea/
+.temp/
 
 # Removing out folder from anywhere in my project
 out/
