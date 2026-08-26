@@ -1,4 +1,4 @@
-package OOPS.A004OOPS.PKG1;
+package OOPS.access.PKG1;
 
 // Class
 public class MyClass {

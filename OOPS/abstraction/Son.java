@@ -1,4 +1,4 @@
-package OOPS.A0005OOPS;
+package OOPS.abstraction;
 
 public class Son extends Parent{
     @Override

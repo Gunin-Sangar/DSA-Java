@@ -1,6 +1,4 @@
-package OOPS.A004OOPS.PKG1;
-
-import OOPS.A004OOPS.PKG2.MySubClass2;
+package OOPS.access.PKG1;
 
 // Subclass (same pkg)
 public class MySubClass1 extends MyClass{
