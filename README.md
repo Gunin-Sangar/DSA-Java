@@ -72,3 +72,7 @@ Day - 10 Saw my void main ... why do i not make a printing fn at this point :)
 Day - 11 of writing randomly on readme
 did inheritance and polymorphism ... dsa feels too big rn (not in my capacity to do it) (proceeds to do more dsa)
 Fun fact: learned why we write @Override
+
+Day - 12 started watching reels after doing my work
+god forbid ... 12 baje kaam krke 1 baje git push kar raha hun
+isse acha toh soo jata :)
