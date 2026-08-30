@@ -1,9 +1,9 @@
-package Lists;
+package Streams;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class A002Streams {
+public class A001Streams {
 
     public static void main(String[] args) {
         streamLearn();
