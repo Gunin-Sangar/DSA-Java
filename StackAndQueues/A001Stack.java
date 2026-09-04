@@ -23,20 +23,5 @@ public class A001Stack {
         System.out.println();
         // Primitive data types (int, double, char, boolean, etc.) are not objects,
         // so they don't have the getClass() method. Use <primitive>.class instead.
-
-
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(12);
-        queue.add(23);
-        queue.add(34);
-        queue.add(45);
-        queue.add(56);
-        queue.add(67);
-
-        int qnum = queue.peek();
-        System.out.println("queue            : " + queue);
-        System.out.println("queue.getClass() : " + queue.getClass());
-        System.out.println("qnum              : " + qnum);
-        System.out.println("int.class        : " + int.class);
     }
 }
