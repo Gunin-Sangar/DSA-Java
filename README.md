@@ -1,5 +1,5 @@
 # DSA-Java
-(Using IntelliJ) (highly recommended)
+### (Using IntelliJ) (highly recommended)
 
 Intro
 wasted time in 1st year.
