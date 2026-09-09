@@ -1,16 +1,14 @@
-package Basics;
+package Strings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class A0020StringAndStringBuilder {
+public class A001Strings {
     public static void main(String[] args) {
         stringEqualities();
         formattedPrint();
         ASCII();
         plusWorking();
-        ABC();
-        SB();
 
         String name = "Gunin Sangar";
         char[] arr = name.toCharArray();
@@ -22,8 +20,6 @@ public class A0020StringAndStringBuilder {
         String name2 = "Random NPC brim";
         String[] arr1 = name2.split(" ");
         System.out.println(Arrays.toString(arr1));
-
-        isPalindrome("acbca");
     }
 
     public static void stringEqualities() {
@@ -74,40 +70,5 @@ public class A0020StringAndStringBuilder {
         String ans = new Integer(45) + " " + new ArrayList<>();
         System.out.println(ans);
         System.out.println();
-    }
-
-    public static void ABC() {
-        // it only looks like O(n) but is O(n^2)
-        // as each time a new string obj is created like
-        // a, ab, abc, abcd, ... abc-xyz which is like 1+2+3+...N = N(N+1)/2
-        String series = "";
-        for (int i = 0; i < 26; i++) {
-            char ch = (char) ('a' + i);
-            series += ch + " ";
-        }
-        System.out.println(series);
-        System.out.println();
-    }
-
-    public static void SB() {
-        StringBuilder series = new StringBuilder();
-        for (int i = 0; i < 26; i++) {
-            char ch = (char) ('a' + i);
-            series.append(ch + " ");
-        }
-        System.out.println(series);
-        System.out.println();
-    }
-
-    public static void isPalindrome(String s) {
-        String s1 = s.toLowerCase();
-        boolean isPalindrome = true;
-        for (int i = 0; i < s1.length()/2; i++) {
-            if(s1.charAt(i) != s1.charAt(s1.length()-i-1)){
-                isPalindrome = false;
-                break;
-            }
-        }
-        System.out.println(isPalindrome);
     }
 }

@@ -1,9 +1,9 @@
-package StackAndQueues;
+package StackAndQueues.queues;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class A003Queue {
+public class A001Queue {
 
     public static void main(String[] args) {
         Queue<Integer> queue = new LinkedList<>();

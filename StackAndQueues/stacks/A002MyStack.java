@@ -1,4 +1,4 @@
-package StackAndQueues;
+package StackAndQueues.stacks;
 
 public class A002MyStack {
 

@@ -1,8 +1,6 @@
-package StackAndQueues;
-import java.util.LinkedList;
-import java.util.Queue;
+package StackAndQueues.stacks;
 import java.util.Stack;
-import java.util.ArrayList;
+
 public class A001Stack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
