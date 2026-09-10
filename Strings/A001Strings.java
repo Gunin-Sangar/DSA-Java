@@ -9,17 +9,7 @@ public class A001Strings {
         formattedPrint();
         ASCII();
         plusWorking();
-
-        String name = "Gunin Sangar";
-        char[] arr = name.toCharArray();
-        System.out.println(Arrays.toString(arr));
-
-        String whitespace = "        White         Spaces          ";
-        System.out.println(whitespace.strip());
-
-        String name2 = "Random NPC brim";
-        String[] arr1 = name2.split(" ");
-        System.out.println(Arrays.toString(arr1));
+        WhiteSpace();
     }
 
     public static void stringEqualities() {
@@ -70,5 +60,29 @@ public class A001Strings {
         String ans = new Integer(45) + " " + new ArrayList<>();
         System.out.println(ans);
         System.out.println();
+    }
+    
+    public static void WhiteSpace(){
+        String str1 = "  Hello       World     ";
+        // removes leading and ending whitespaces
+        String stripped =  str1.strip();
+
+        System.out.println(str1);
+        System.out.println(stripped);
+        System.out.println(stripped.replaceAll("\\s",""));
+
+        String str2 = Arrays.toString(stripped.split("\\s+", 2));
+        System.out.println(str2);
+
+        String str3 = String.join(" ", stripped.split("\\s+", 2));
+        System.out.println(str3);
+
+        String arr1 = "Kunal Apoorv Rahul Snehal";
+        String[] names = arr1. split(" ");
+        System.out.println(Arrays.toString(names));
+
+        String role = "Senior Ai Engineer";
+        char[] arr2 = role.toCharArray();
+        System.out.println(Arrays.toString(arr2));
     }
 }
