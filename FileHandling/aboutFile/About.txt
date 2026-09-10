@@ -1,0 +1,16 @@
+- Streams are of 2 types
+    Byte Stream           [InputStream and OutputStream] [both ends in "Stream"]
+    Character Stream      [Reader, Writer] [ends with "Read" or "Write"]
+    [both "Abstract" classes and also extends Object directly]
+
+
+- BYTE STREAMS
+    InputStream [implements Closeable(which extends AutoCloseable) both interfaces with void close() method only]
+    - Direct Known Subclasses:
+      AudioInputStream, ByteArrayInputStream, FileInputStream, FilterInputStream,
+      InputStream, ObjectInputStream, PipedInputStream, SequenceInputStream, StringBufferInputStream
+
+    OutputStream [implements Closeable(which extends AutoCloseable) both interfaces with void close() method only]
+    - Direct Known Subclasses:
+      ByteArrayOutputStream, FileOutputStream, FilterOutputStream, ObjectOutputStream, OutputStream, PipedOutputStream
+
