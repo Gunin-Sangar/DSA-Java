@@ -82,3 +82,25 @@ organized small 10sec things
 Also, decided to add this for reference
 ![Java Collections Framework Overview](https://www.codejava.net/images/articles/javacore/collections/collections%20framework%20overview.png)
 ![Java Collections Framework Overview](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*UqqMx9-33s7m_i2tN0vT7w.png)
+
+Day-14 Collections and Map framework again
+Interfaces                                  Classes
+
+Collection<E>
+├── List<E>          ────────────────→  ArrayList LinkedList Vector Stack
+│
+├── Set<E>
+│    ├── SortedSet<E>
+│    │    └── NavigableSet<E> ───────→  TreeSet
+│    └───────────────────────────────→  HashSet LinkedHashSet
+│
+└── Queue<E>
+    ├── Deque<E> ──────────────────→  ArrayDeque
+    │                                 LinkedList
+    └──────────────────────────────→  PriorityQueue
+
+
+Map<K,V>                                (NOT a subtype of Collection<E>)
+├── SortedMap<K,V>
+│    └── NavigableMap<K,V> ─────────→  TreeMap
+└───────────────────────────────────→  HashMap LinkedHashMap Hashtable

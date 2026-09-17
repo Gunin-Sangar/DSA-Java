@@ -23,10 +23,11 @@ public class A001Maps {
         Map<Integer, String> map = new HashMap<>();
 
         // Put (Add)
-        map.put(1, "Java");
-        map.put(2, "Python");
-        map.put(3, "C++");
-        map.put(2, "JavaScript");   // Updates existing key
+        map.put(30, "C++");
+        map.put(10, "Java");
+        map.put(20, "Python");
+        map.put(40, "JavaScript");   // Updates existing key
+        map.put(20, "snake");
 
         System.out.println("Map : " + map);
 
@@ -83,9 +84,11 @@ public class A001Maps {
         Map<Integer, String> map = new LinkedHashMap<>();
 
         // Put
-        map.put(3, "C++");
-        map.put(1, "Java");
-        map.put(2, "Python");
+        map.put(30, "C++");
+        map.put(10, "Java");
+        map.put(20, "Python");
+        map.put(40, "JavaScript");
+        map.put(20, "snake");
 
         System.out.println("Map : " + map);
 
@@ -120,6 +123,7 @@ public class A001Maps {
         map.put(10, "Java");
         map.put(20, "Python");
         map.put(40, "JavaScript");
+        map.put(20, "snake");
 
         System.out.println("Map : " + map);
 
@@ -167,3 +171,31 @@ public class A001Maps {
 //map.keySet();            // Keys
 //map.values();            // Values
 //map.entrySet();          // Key-Value pairs
+
+
+
+/*
+        |                    | `HashMap`              | `LinkedHashMap`               | `TreeMap`        |
+        | ------------------ | ---------------------  | ----------------------------  | ---------------  |
+        | Ordering           | No guaranteed order    | Insertion order               | Sorted order     |
+        | Typical speed      | Very fast              | Very fast                     | Slower           |
+        | `get()` / `put()`  | ~ O(1)                 | ~ O(1)                        | ~ O(log n)       |
+        | Allows 1 null key  | ✅                     | ✅                            | Not generally    |
+        | Allows null values | ✅                     | ✅                            | ✅               |
+        | Main idea          | Fast                   | Remember insertion order      | Keep sorted       |
+
+
+        TreeMap exception (sorts on basis of keys [There is no natural ordering for null] [hence null not aloud])
+        You can make a TreeMap accept a null key if you provide a Comparator that knows how to handle null:
+
+        TreeMap<Integer, String> map =
+                new TreeMap<>(java.util.Comparator.nullsFirst(
+                        java.util.Comparator.naturalOrder()
+                ));
+
+        map.put(null, "X");
+        map.put(10, "A");
+        map.put(20, "B");
+
+        System.out.println(map);
+*/

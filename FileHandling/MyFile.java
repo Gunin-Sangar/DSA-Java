@@ -11,7 +11,7 @@ public class MyFile {
         Scanner sc = new Scanner(System.in);
 
         // File only points to the path and does not create the file itself
-        File file = new File("D:\\code_workspace\\DSA-Java\\FileHandling\\aboutFile\\TestFile");
+        File file = new File("../DSA-Java/FileHandling/aboutFile/TestFile");
 
         FileInputStream fis = new FileInputStream(file);
         int data;
